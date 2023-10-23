@@ -1,0 +1,30 @@
+server:
+  port: 8003
+
+spring:
+  application:
+    name: EC_GATEWAY
+  cloud:
+    gateway:
+      routes:
+        - id: EC1
+          uri: lb://EC1
+          predicates:
+            - Path=/EC1/**
+          filters:
+            - CustomGatewayFilter
+        - id: EC2
+          uri: lb://EC2
+          predicates:
+            - Path=/EC2/**
+          filters:
+            - CustomGatewayFilter
+
+eureka:
+  instance:
+    instance-id: ${spring.application.name}
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka

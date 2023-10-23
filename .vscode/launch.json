@@ -1,0 +1,45 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "EcgApplication",
+      "request": "launch",
+      "mainClass": "com.example.ecg.EcgApplication"
+    },
+    {
+      "type": "java",
+      "name": "Ec2Application",
+      "request": "launch",
+      "mainClass": "com.example.ec2.Ec2Application",
+      "projectName": "ec2"
+    },
+    {
+      "type": "java",
+      "name": "Ec1Application",
+      "request": "launch",
+      "mainClass": "com.example.ec1.Ec1Application",
+      "projectName": "ec1"
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-EsApplication<es>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.example.es.EsApplication",
+      "projectName": "es",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env",
+      "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=59682 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=es"
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-EcgApplication<ecg>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.example.ecg.EcgApplication",
+      "projectName": "ecg",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}
